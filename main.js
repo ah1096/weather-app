@@ -1,5 +1,6 @@
-const APIurl = 'https://api.openweathermap.org/data/2.5/weather?zip=40324,us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial';
-const APIkey = '64a10bf79d7c527df3631aa5317b84ed';
+function getWeather(ZIPcode) {
+
+const APIurl = `https://api.openweathermap.org/data/2.5/weather?zip=${ZIPcode},us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial`;
 
 
 axios.get(APIurl)
@@ -17,14 +18,6 @@ axios.get(APIurl)
   console.log(response.data.weather[0].description);
 })
 
-window.onload = function(){
-  document.getElementById("searchButton").onclick = function(){
-    const ZIPcode = document.getElementByID("ZIPinput").value;
-  }
-}
-
-
-
 .catch(function (error) {
   console.log(error);
 })
@@ -32,8 +25,14 @@ window.onload = function(){
 .then(function () {
   console.log("Finished");
 });
+}
 
-
+window.onload = function() {
+  document.getElementById("searchButton").onclick = function(){
+    const ZIPcode = document.getElementById("ZIPinput").value;
+    getWeather(ZIPcode);
+  }
+}
 
 
 
