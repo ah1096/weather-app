@@ -12,6 +12,7 @@ axios.get(APIurl)
   console.log(response);
 
   document.getElementById("nameDisplay").innerText = `${response.data.name}`;
+  nameDisplay.style.color = "black";
   console.log(response.data.name);
 
   document.getElementById("tempDisplay").innerText = `${response.data.main.temp}°F`;
@@ -19,10 +20,14 @@ axios.get(APIurl)
   
   document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
   console.log(response.data.weather[0].description);
+
+  document.getElementById("iconDisplay").innerHTML = `${response.data.weather[0].icon}`;
+  console.log(response.data.weather[0].description);
 })
 
 .catch(function (error) {
   document.getElementById("nameDisplay").innerText = "Oops. Please input a valid ZIP code.";
+  nameDisplay.style.color = "red";
   console.log(error);
 })
 
