@@ -21,8 +21,6 @@ axios.get(APIurl)
   document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
   console.log(response.data.weather[0].description);
 
-  document.getElementById("iconDisplay").innerHTML = `${response.data.weather[0].icon}`;
-  console.log(response.data.weather[0].description);
 })
 
 .catch(function (error) {
