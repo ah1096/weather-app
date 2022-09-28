@@ -15,14 +15,13 @@ axios.get(APIurl)
   
   document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
   console.log(response.data.weather[0].description);
-
-
-
-
-
 })
 
-
+window.onload = function(){
+  document.getElementById("searchButton").onclick = function(){
+    const ZIPcode = document.getElementByID("ZIPinput").value;
+  }
+}
 
 
 
