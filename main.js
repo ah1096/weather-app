@@ -1,12 +1,30 @@
-const APIurl = 'https://api.openweathermap.org/data/2.5/weather?zip=40324,us&appid=64a10bf79d7c527df3631aa5317b84ed&units=metric';
+const APIurl = 'https://api.openweathermap.org/data/2.5/weather?zip=40324,us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial';
 const APIkey = '64a10bf79d7c527df3631aa5317b84ed';
 
 
 axios.get(APIurl)
 
 .then(function (response) {
+  console.log(response);
+
+  document.getElementById("nameDisplay").innerText = `${response.data.name}`;
+  console.log(response.data.name);
+
+  document.getElementById("tempDisplay").innerText = `${response.data.main.temp}°F`;
   console.log(response.data.main.temp);
+  
+  document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
+  console.log(response.data.weather[0].description);
+
+
+
+
+
 })
+
+
+
+
 
 .catch(function (error) {
   console.log(error);
