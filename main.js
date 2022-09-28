@@ -4,6 +4,8 @@
 function getWeather(ZIPcode) {
 
 const APIurl = `https://api.openweathermap.org/data/2.5/weather?zip=${ZIPcode},us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial`;
+/* ?????????????????create function to change the units to metric/standard, maybe add toggle button? 
+/* ?????????????????use template literals on units in url *////
 
 
 axios.get(APIurl)
