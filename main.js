@@ -19,6 +19,7 @@ axios.get(APIurl)
 })
 
 .catch(function (error) {
+  document.getElementById("nameDisplay").innerText = "Oops. Please input a valid ZIP code.";
   console.log(error);
 })
 
