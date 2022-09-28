@@ -1,3 +1,6 @@
+//////* FUNCTION: getWeather (populates elements w/ API data) *//////
+
+
 function getWeather(ZIPcode) {
 
 const APIurl = `https://api.openweathermap.org/data/2.5/weather?zip=${ZIPcode},us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial`;
@@ -27,6 +30,8 @@ axios.get(APIurl)
   console.log("Finished");
 });
 }
+
+//////* FUNCTION: onload (receives input from text field to activate getWeather) *//////
 
 window.onload = function() {
   document.getElementById("searchButton").onclick = function(){
