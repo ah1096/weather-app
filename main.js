@@ -1,21 +1,22 @@
-
-
-const APIurl = 'https://api.openweathermap.org/data/2.5/weather?zip=40324,us&appid=64a10bf79d7c527df3631aa5317b84ed';
+const APIurl = 'https://api.openweathermap.org/data/2.5/weather?zip=40324,us&appid=64a10bf79d7c527df3631aa5317b84ed&units=metric';
 const APIkey = '64a10bf79d7c527df3631aa5317b84ed';
 
 
 axios.get(APIurl)
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .then(function () {
-  });
 
-let temp = response.data.main.temp;
-h1.innerHTML = "dfcgvhbn";
+.then(function (response) {
+  console.log(response.data.main.temp);
+})
+
+.catch(function (error) {
+  console.log(error);
+})
+
+.then(function () {
+  console.log("Finished");
+});
+
+
 
 
 
