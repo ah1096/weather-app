@@ -20,7 +20,6 @@ axios.get(APIurl)
 
 .catch(function (error) {
   document.getElementById("nameDisplay").innerText = "Oops. Please input a valid ZIP code.";
-  nameDisplay.style.color = "red";
   console.log(error);
 })
 
