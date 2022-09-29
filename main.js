@@ -70,6 +70,11 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/mo
     
     document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
     console.log(response.data.weather[0].description);
+
+
+
+
+    
   })
   
   .catch(function (error) {
@@ -116,3 +121,9 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/mo
 /* clearData () /* return to init/blank page, called by buttonclick */
 
 
+const weatherIcon = response.data.weather[0].icon;
+const pageIcon = document.createElement('img');
+
+let iconURL = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+pageIcon.src = iconURL;
+main.appendChild(pageIcon);
