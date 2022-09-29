@@ -82,9 +82,9 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/mo
     console.log("Finished");
   });
   }
-  
-  
-  /*✅*/ window.onload = function() {
+
+////////TEXT INPUT + BUTTON, calls ////////  
+/*✅*/ window.onload = function() {
     document.getElementById("searchButton").onclick = function(){
       const ZIPcode = document.getElementById("ZIPinput").value;
       getWeather(ZIPcode);
@@ -115,7 +115,4 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/mo
 
 /* clearData () /* return to init/blank page, called by buttonclick */
 
-/* buttonClick() /* get ZIP and validate input */
-
-/* alertError() /* tells if zipcode input is invalid */ 
 
