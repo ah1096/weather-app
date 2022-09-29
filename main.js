@@ -43,17 +43,28 @@ window.onload = function() {
 }
 
 
-function makeThis (tag, type, idName, src, classX, parent, text) {
+function makeThis (tag, type, idName, src, classX, text, parent) {
   tag = document.createElement(tag);
-  tag.type = type;
-  tag.id = idName;
-  tag.src = src;
-  tag.className = classX;
-  parent.appendchild(tag);
-  tag.innerText = text;
-}
+    type = tag.setAttribute('type', type)
+    idName = tag.setAttribute('id', idName);
+    parent.appendchild(tag);
+};
 
-makeThis(h1, null, header, null, 'contaienr-fluid text-primary', main, '')
+
+document.createElement("button");
+    resetbutton.innerHTML = "reset";
+    resetbutton.className = "resetbutton";
+    resetbutton.setAttribute('id', 'resetbutton'); /*add ID to be used in toggleButtons function*/
+    resetbutton.setAttribute('title', 'imbibe tincture of amnesia');
+    document.body.appendChild(resetbutton);
+
+
+
+
+function generatePage (){
+  window.body = document.querySelector('body');
+  makeThis('h1', null, 'header', null, 'container-fluid text-primary', body, 'please work');
+}
 
 
 
