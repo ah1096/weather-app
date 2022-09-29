@@ -1,7 +1,7 @@
-.pinktext{
-    color: pink;
-}
-
 img {
     max-width: 100px;
+}
+
+body {
+    background-color: #bbb6df;
 }

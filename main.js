@@ -2,26 +2,26 @@
 /////////* GENERATES HTML: why are my cards weird?????????? */////////
 const main = document.getElementById('main');
 
-/*✅ */function createElement (parent, idX, classX, tag, text, type, style, source) {
+/*✅ */function createElement (parent, idX, classX, tag, text, type, style, source, placeholderText) {
   let element = document.createElement(tag);
   console.log(element);
   element.setAttribute('id', idX);
   element.className = classX;
   element.innerText = text;
   element.setAttribute('type', type);
-  element.setAttribute('style', style)
-  element.setAttribute('src', source)
+  element.setAttribute('style', style);
+  element.setAttribute('src', source);
+  element.setAttribute('placeholder', placeholderText);
   parent.appendChild(element);
   console.log(element);
 }
 
-createElement(main, 'pargraphID', 'pinktext', 'p', 'hello'); 
 
 ///making the HEADER and text input/////
 /*✅*/function generateHeader (){
 createElement(main, 'headerDiv', 'headerDiv', 'div', null, null, null, null); 
 createElement(main, null, null, 'h1', 'Weather App', null, null, null); 
-createElement(main, 'ZIPinput', null, 'input', null, 'text', null, null); 
+createElement(main, 'ZIPinput', null, 'input', null, 'text', null, null, 'enter ZIP code');
 createElement(main, 'searchButton', null, 'button', 'Search', null, null, null); 
 }
 generateHeader();
