@@ -11,14 +11,35 @@
 </head>
 
 <body>
-    <div id='div1'>
+    <div id='main'>
 
         <h1>Weather App</h1>
         <input type="text" id="ZIPinput">
         <button id="searchButton">Search</button>
-        <p id="nameDisplay"></p>
-        <p id="tempDisplay"></p>
-        <p id="descDisplay"></p>
+       
+
+
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">city</h5>
+              <p id="nameDisplay"></p>
+            </div>
+          </div>
+
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">temperature</h5>
+              <p id="tempDisplay"></p>
+            </div>
+          </div>
+
+          <div class="card text-center " style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">weather</h5>
+              <p id="descDisplay"></p>
+              <img src="..." class="card-img-bottom" alt="weather icon">
+            </div>
+          </div>
 
     </div>
 </body>

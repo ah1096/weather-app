@@ -43,6 +43,24 @@ window.onload = function() {
 }
 
 
+function makeThis (tag, type, idName, src, classX, parent, text) {
+  tag = document.createElement(tag);
+  tag.type = type;
+  tag.id = idName;
+  tag.src = src;
+  tag.className = classX;
+  parent.appendchild(tag);
+  tag.innerText = text;
+}
+
+makeThis(h1, null, header, null, 'contaienr-fluid text-primary', main, '')
+
+
+
+
+
+
+
 
 
 
