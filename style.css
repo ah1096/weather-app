@@ -1,3 +1,7 @@
-#main {
-    text-align: center;
+.pinktext{
+    color: pink;
+}
+
+img {
+    max-width: 100px;
 }
