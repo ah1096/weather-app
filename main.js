@@ -44,7 +44,7 @@ createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18
 createElement(main, null, 'card-body', 'div', null, null, null, null);
 createElement(main, null, 'card-title', 'h5', 'weather', null, null, null);
 createElement(main, 'descDisplay', 'p', null, null, null, null, null);
-createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'xxx');
+createElement(main, 'icon', 'card-img-bottom', 'img', null, null, null, null);
 }
 
 
@@ -65,11 +65,17 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'xxx');
     nameDisplay.style.color = "black";
     console.log(response.data.name);
   
-    document.getElementById("tempDisplay").innerText = `${response.data.main.temp}°F`;
+    document.getElementById("tempDisplay").innerText = `${response.data.main.temp}°F | ` + `${Math.round(((response.data.main.temp) - 32) * .5556)}°C | ` + `${Math.round(((((response.data.main.temp)-32)*5) / 9 ) + 273.15)}°K`;
     console.log(response.data.main.temp);
     
     document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
     console.log(response.data.weather[0].description);
+
+    
+
+    let weatherIcon = `${response.data.weather[0].icon}`;
+    let iconURL = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+    document.getElementById("icon").src = iconURL;
 
   })
   
