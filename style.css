@@ -1,7 +1,34 @@
+
+body {
+    background-color: #bbb6df;
+}
+
+h1 {
+    color: #4e4187;
+}
+
+
+
+.card-title {
+    background-color: #ffffff;
+    color: #4e4187;
+}
+
+.card-body{
+    color: red;
+}
+
+button {
+    background-color: #5ce4ff;
+    border-radius: 5px;
+    border-color: 5px solid white;
+    color: white;
+}
+
 img {
     max-width: 100px;
 }
 
-body {
-    background-color: #bbb6df;
+.main {
+    text-align: center;
 }

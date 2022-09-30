@@ -28,23 +28,23 @@ generateHeader();
 
 /*🛑*/function generateCards() {
 //making CITY NAME card appear//
-createElement(main, null, 'card text-center', 'div', null, null, 'width: 18rem', null);
+createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18rem', null);
 createElement(main, null, 'card-body', 'div', null, null, null, null);
 createElement(main, null, 'card-title', 'h5', 'city', null, null, null);
 createElement(main, 'nameDisplay', 'p', null, null, null, null, null);
 
 //making TEMPERATURE card appear//
-createElement(main, null, 'card text-center', 'div', null, null, 'width: 18rem', null);
+createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18rem', null);
 createElement(main, null, 'card-body', 'div', null, null, null, null);
 createElement(main, null, 'card-title', 'h5', 'temperature', null, null, null);
 createElement(main, 'tempDisplay', 'p', null, null, null, null, null);
 
 //making WEATHER CONDITION card appear//
-createElement(main, null, 'card text-center', 'div', null, null, 'width: 18rem', null);
+createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18rem', null);
 createElement(main, null, 'card-body', 'div', null, null, null, null);
 createElement(main, null, 'card-title', 'h5', 'weather', null, null, null);
 createElement(main, 'descDisplay', 'p', null, null, null, null, null);
-createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/moonbeam.png');
+createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'xxx');
 }
 
 
@@ -71,10 +71,6 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'images/mo
     document.getElementById("descDisplay").innerText = `${response.data.weather[0].description}`;
     console.log(response.data.weather[0].description);
 
-
-
-
-    
   })
   
   .catch(function (error) {
