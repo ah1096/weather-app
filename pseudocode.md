@@ -4,7 +4,6 @@
 My pseudocode is garbage, therefore my code is garbage. 
 Lesson learned.
 
-Josh: if you'read reading this before class, I'm showing up with broken code.
 
 
 
