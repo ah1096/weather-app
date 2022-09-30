@@ -16,7 +16,6 @@ const main = document.getElementById('main');
   console.log(element);
 }
 
-
 ///making the HEADER and text input/////
 /*✅*/function generateHeader (){
 createElement(main, 'headerDiv', 'headerDiv', 'div', null, null, null, null); 
@@ -28,6 +27,7 @@ generateHeader();
 
 /*🛑*/function generateCards() {
 //making CITY NAME card appear//
+
 createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18rem', null);
   createElement(main, null, 'card-body', 'div', null, null, null, null);
     createElement(main, null, 'card-title', 'h5', 'city', null, null, null);
@@ -47,9 +47,7 @@ createElement(main, null, 'card w-50 text-center', 'div', null, null, 'width: 18
         createElement(main, 'icon', 'card-img-bottom', 'img', null, null, null, null);
 }
 
-
 /////////GETS API DATA////////
-
 /*✅*/function getWeather(ZIPcode) {
 
   const APIurl = `https://api.openweathermap.org/data/2.5/weather?zip=${ZIPcode},us&appid=64a10bf79d7c527df3631aa5317b84ed&units=imperial`;
