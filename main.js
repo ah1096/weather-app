@@ -103,23 +103,11 @@ createElement(main, null, 'card-img-bottom', 'img', null, null, null, 'xxx');
 
 
 
-
-/* init() /* get div by ID + assign container class w/ classList, generate UI: header, text input, button; append to div */
-
-/* createElements() /* create divs upfront */
-
-/* tempConvert() /* retrieve standard, convert to Imperial/Metric, display all */
-
-/* conditionToImage () /* generates image depending on weather condition */
-
-/* getWeather () /* obtain values from the API, called by buttonclick; async */
-
-/* clearData () /* return to init/blank page, called by buttonclick */
-
+/*
 
 const weatherIcon = response.data.weather[0].icon;
 const pageIcon = document.createElement('img');
 
 let iconURL = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 pageIcon.src = iconURL;
-main.appendChild(pageIcon);
+main.appendChild(pageIcon); */
